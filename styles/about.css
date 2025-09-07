@@ -1,0 +1,52 @@
+/* ========== BODY ========== */
+.main-body {
+  padding: 60px 10px 80px 0px;
+}
+
+.content-body {
+  margin: 30px 0px 0px 20px;
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+  max-width: 50vw;
+}
+
+.picture-div {
+  border: solid;
+  border-color: rgb(197, 0, 80);
+  border-radius: 10px;
+  padding: 5px;
+  margin: 50px 0 0 0;
+}
+
+@media screen and (max-width: 997px) {
+  .content-body {
+    max-width: 80vw;
+  }
+  .picture-div {
+    margin: 0 0 30px 30px;
+  }
+}
+
+.picture1-div, .picture2-div, .picture3-div {
+  display: inline-block;
+}
+  .picture1 {
+    width: 195px;
+    border-radius: 10px 0 0 10px;
+  }
+  .picture2 {
+    width: 195px;
+    border-radius: 0 10px 10px 0;
+  }
+
+
+.page-description {
+  color:rgb(67, 66, 66);
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 15px;
+  text-wrap: wrap;
+  text-align: justify;
+}
+

@@ -1,0 +1,44 @@
+/* ========== BODY ========== */
+.main-body {
+  padding: 50px 20px 0 0px;
+}
+
+.content-body {
+  margin: 40px 20px 20px 20px;
+  display: block;
+}
+
+.contact-logos {
+  display: inline-block;
+  vertical-align: middle;
+  width: 600px;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+.kingschat-logo-div, .instagram-logo-div {
+  display: inline-block;
+}
+.kingschat-logo, .kingsconf-logo, .instagram-logo {
+  width: 85px;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+.kingschat-username, .instagram-username {
+  display: inline-block;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(66, 65, 65);
+  vertical-align: middle;
+}
+.kingschat-container, .instagram-container {
+  display: block;
+}
+
+@media screen and (max-width: 1100px) {
+  .contact-logos {
+    margin-top: 0px;
+  }
+  .content-body {
+    margin-bottom: 0px;
+  }
+}

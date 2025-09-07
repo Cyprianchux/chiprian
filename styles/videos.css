@@ -1,0 +1,165 @@
+
+
+/* ========== BODY ========== */
+.main-body {
+  padding: 30px 10px;
+  justify-content: center;
+}
+
+.content-body {
+  padding-top: 65px;
+  margin: 0px 20px 20px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h3 {
+  margin: 0;
+}
+
+/* = VIDEO BOARD SECTION = */
+
+.video-board {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 7px;
+  row-gap: 30px;
+  margin: 0 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+.flex-div {
+  width: 100%;
+  max-width: 400px;
+  border: solid;
+  border-color: rgb(197, 0, 80);
+  border-width: 3px;
+  border-radius: 5px;
+}
+
+
+  .photo {
+    width: 100%;
+    height: 100%;
+  }
+
+  .picture-details {
+    margin-top: 5px;
+  }
+
+  .pp {
+    width: 40px;
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: top;
+  }
+    .profile-pix {
+      width: 40px;
+      height: 40px;
+      border-radius: 30px;
+    }
+
+  .channel-details {
+    width: 340px;
+    display: inline-block;
+    margin-left: 5px;
+  }
+
+    .text1 {
+      margin-top: 0;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .text2, .text3, .text4 {
+      color: grey;
+      font-size: 14px;
+      margin-top: 0;
+    }
+
+    .location-icon-div {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .location-icon {
+      width: 20px;
+      margin-right: 4px;
+    }
+
+    .text2-div {
+      display: inline-block;
+    }
+    .text2 {
+      margin-bottom: 0px;
+    }
+
+    .camera-icon-div {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .camera-icon {
+      width: 25px;
+      margin-top: 1px;
+    }
+    .text3-div {
+      display: inline-block;
+    }
+    .text3 {
+      margin-left: 0px;
+    }
+
+    .clock-icon-div {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .clock-icon {
+      width: 20px;
+      margin-right: 2px;
+    }
+
+    .text4-div {
+      display: inline-block;
+    }
+    .text4 {
+      font-size: 16px;
+      margin-bottom: 5px;
+      margin-left: 3px;
+    }
+video {
+  z-index: 0;
+}
+
+/* ========== RESPONSIVE MENUS ========== */
+
+  /* Toggle: when checkbox is checked, show vertical dropdown */
+  /* Toggle: when checkbox is checked, show vertical dropdown */
+
+@media screen and (max-width: 900px) {
+  #menu-toggle:checked ~ header .right-header-menu {
+    flex-direction: row;
+    top: 66px;
+    border-bottom: 1px solid rgb(128, 128, 128, 0.3);
+    background-color: white;
+  }
+
+  /* Also show middle header links */
+  #menu-toggle:checked ~ header .middle-header {
+    flex-direction: row;
+    position: absolute;
+    top: 66px;
+    left: 285px;
+    border-bottom: 1px solid rgb(128, 128, 128, 0.3);
+    background-color: white;
+  }
+}  
+
+  /* Push content down */
+  #menu-toggle:checked ~ main {
+    margin-top: 20px;
+    transition: 0.5s ease-in;
+  }
+    

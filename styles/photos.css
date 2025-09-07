@@ -1,0 +1,154 @@
+
+
+/*  BODY  */
+.main-body {
+  padding: 30px 10px;
+  justify-content: center;
+}
+
+.content-body {
+  padding-top: 50px;
+  margin: 0px 20px 20px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  h3 {
+    margin: 0px;
+  }
+
+/* = PICTURE BOARD SECTION =*/
+
+.picture-board {
+  display: flex;
+  column-gap: 7px;
+  row-gap: 30px;
+  margin: 0 10px;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.grid-div {
+  width: 290px;
+  border: solid;
+  border-color: rgb(197, 0, 80);
+  border-width: 2px;
+  border-radius: 5px;
+}
+
+  .main-photo {
+    object-fit: contain;
+    width: 100%;
+    height: 200px;
+
+  }
+
+  .photo {
+    width: 100%;
+    height: 100%;
+  }
+
+  .picture-details {
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+
+  .channel-details {
+    width: 255px;
+    display: inline-block;
+    margin-left: 0px;
+  }
+
+    .text1 {
+      margin-top: 0;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .text2, .text3 {
+      color: grey;
+      font-size: 14px;
+      margin-top: 0;
+    }
+
+    .location-icon-div {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .location-icon {
+      width: 15px;
+      margin-right: 2px;
+    }
+
+    .text2-div {
+      display: inline-block;
+    }
+    .text2 {
+      margin-bottom: 0;
+      margin-bottom: 5px;
+    }
+
+    .camera-icon-div {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .camera-icon {
+      width: 15px;
+      margin-top: 1px;
+      margin-right: 2px;
+    }
+    .text3-div {
+      display: inline-block;
+    }
+    .text3 {
+      font-size: 12px;
+    }
+
+.page-description-div {
+  display: flex;
+  margin-left: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+  /* Toggle: when checkbox is checked, show vertical dropdown */
+
+@media screen and (max-width: 900px) {
+  #menu-toggle:checked ~ header .right-header-menu {
+    flex-direction: row;
+    top: 66px;
+    border-bottom: 1px solid rgb(128, 128, 128, 0.3);
+    background-color: white;
+  }
+
+  /* Also show middle header links */
+  #menu-toggle:checked ~ header .middle-header {
+    flex-direction: row;
+    position: absolute;
+    top: 66px;
+    left: 285px;
+    border-bottom: 1px solid rgb(128, 128, 128, 0.3);
+    background-color: white;
+  }
+}
+
+  /* Push content down */
+  #menu-toggle:checked ~ main {
+    margin-top: 30px;
+  }
+
+.top-btn {
+  display: inline-block;
+  padding: 8px 15px;
+  background: rgb(197, 0, 80);
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.top-btn:hover {
+  scale: 1.02;
+}
