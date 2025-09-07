@@ -1,0 +1,239 @@
+body {
+  margin: 0;
+  user-select: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.main-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid rgb(128, 128, 128, 0.3);
+  box-shadow: 1px 1px 10px rgb(128, 128, 128, 0.3);
+  background-color: white;
+  z-index: 1;
+}
+
+/* ========== LEFT HEADER ========== */
+.left-header {
+  width:200px;
+  display: flex;
+  align-items: center;
+}
+  .logo {
+    width: 40px;
+    margin: 10px 7px 7px 5px;
+    border-radius: 6px;
+    display: inline-block;
+  }
+  
+  .event-name {
+    color: rgb(67, 66, 66);
+    font-size: 20px;
+    margin: 0px;
+    display: inline-block;
+  }
+
+  .homepage-link {
+    text-decoration: none;
+  }
+
+  /* ========== MIDDLE HEADER ========== */
+.middle-header {
+  flex: 1;
+  word-spacing: 20px;
+  padding: 0 80px;
+}
+  .photos, .videos {
+    color: rgb(67, 66, 66);
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  /* ========== RIGHT HEADER ========== */
+.right-header {
+  display: block;
+  width: 220px;
+  margin-right: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+  .right-header-menu {
+    display: flex;
+    gap: 20px;
+  }
+  .highlight, .about, .contact {
+    font-size: 18px;
+    color: rgb(67, 66, 66);
+    text-decoration: none;
+  }
+
+  .menu-icon-label {
+    position: absolute;
+    right: 20px;
+    top: 0px;
+  }
+
+  .menu-icon {
+    width: 50px;
+    display: none;
+    margin: 7px 0 2px 0;
+    cursor: pointer;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+  }
+  
+  .menu-icon:hover {
+    border: 1px solid rgba(197, 0, 80, 0.2);
+  }
+
+  .menu-icon:active {
+    border: solid;
+    border-radius: 10px;
+    border-color: rgb(164, 162, 162);
+    border-width: 3px;
+  }
+
+/* ========== BODY ========== */
+.main-body {
+  padding:80px 10px 50px 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.content-body {
+  padding: 10px 0px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+  display: inline-block;
+  align-content: center;
+}
+
+.dp-div {
+  flex: 300px;
+  max-width: 450px;
+  margin: 10px 5vw 50px 20px;
+  background-color: white;
+}
+.display-picture {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* === RESPONSIVE H1 === */
+h1 {
+font-size: clamp(1.5rem, 3vw, 2.5rem);
+transition: 1.5s ease;
+}
+
+.page-description {
+  color:rgb(67, 66, 66);
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+
+button {
+  color: white;
+  font-weight: bold;
+  background-color: rgb(197, 0, 80);
+  padding: 12px 16px;
+  border: 1px solid rgb(197, 0, 80);
+  border-radius: 5px;
+}
+  button:hover {
+    cursor: pointer;
+    color: rgb(197, 0, 80);
+    background-color: rgb(255, 236, 232);
+    border-color: rgb(210, 6, 88);
+    scale: 1.02;
+    transition: 0.3s ease;
+  }
+
+  /* ========== RESPONSIVE MENUS ========== */
+@media screen and (max-width: 900px) {
+  .right-header-menu,
+  .middle-header {
+    display: none;
+  }
+
+  /* Show menu icon */
+  .menu-icon {
+    display: block;
+  }
+
+  /* Transition dropdown visibility */
+/* Delay appearance of toggled menu so it doesn't overlap h1 */
+  #menu-toggle:checked ~ header .right-header-menu,
+  #menu-toggle:checked ~ header .middle-header {
+    animation: fadeInDown 0.3s ease 0.3s forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeInDown {
+    to {
+      opacity: 1;
+    }
+  }
+
+    /* Push content down */
+  #menu-toggle:checked ~ main {
+    margin-top: 200px;
+    transition: margin-top 0.5s ease-in;
+  }
+
+/* Push content up */
+#menu-toggle:not(checked) ~ main {
+    margin-top: 0;
+    transition: margin-top 0.7s ease-out;
+  }
+
+  /* Toggle: when checkbox is checked, show vertical dropdown */
+  #menu-toggle:checked ~ header .right-header-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left:55px;
+    padding: 10px 10px;
+    gap: 20px;
+    background-color: white;
+  }
+
+  /* Also show middle header links */
+  #menu-toggle:checked ~ header .middle-header {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 190px;
+    left: 55px;
+    padding: 10px 10px;
+    gap: 20px;
+    background-color: white;
+  }
+
+  .highlight:hover, .about:hover,
+  .contact:hover, .photos:hover,
+  .videos:hover {
+    color: rgb(197, 0, 80);
+    scale: 1.06;
+  }
+
+  .highlight:active, .about:active,
+  .contact:active, .photos:active,
+  .videos:active {
+    font-weight: bold;
+  }  
+}
+
