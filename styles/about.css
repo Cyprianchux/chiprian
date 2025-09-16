@@ -24,11 +24,13 @@
     max-width: 80vw;
   }
   .picture-div {
-    margin: 0 0 30px 30px;
+    display: flex;
+    column-gap: 3px;
+    margin: 0 auto 30px auto;
   }
 }
 
-.picture1-div, .picture2-div, .picture3-div {
+.picture1-div, .picture2-div {
   display: inline-block;
 }
   .picture1 {
