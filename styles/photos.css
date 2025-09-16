@@ -119,25 +119,29 @@
 @media screen and (max-width: 900px) {
   #menu-toggle:checked ~ header .right-header-menu {
     flex-direction: row;
-    top: 66px;
+    top: 67px;
     border-bottom: 1px solid rgb(128, 128, 128, 0.3);
     background-color: white;
+    padding: 15px;
+    border-bottom-left-radius: 10px;
   }
 
   /* Also show middle header links */
   #menu-toggle:checked ~ header .middle-header {
     flex-direction: row;
     position: absolute;
-    top: 66px;
+    top: 67px;
     left: 285px;
     border-bottom: 1px solid rgb(128, 128, 128, 0.3);
     background-color: white;
+    padding: 15px;
+    border-bottom-right-radius: 10px;
   }
 }
 
   /* Push content down */
   #menu-toggle:checked ~ main {
-    margin-top: 30px;
+    margin-top: 35px;
   }
 
 .top-btn {
