@@ -4,7 +4,7 @@ A responsive built to showcase photos, videos, and highlights of Chidinma & Cypr
 
 This project demonstrates front-end web development with HTML, CSS, and JavaScript, featuring a responsive navigation menu, interactive UI elements, and modern design principles.
 
-#### Click <a href="chiprian.vercel.app">here</a> to view the website.
+#### Click <a href="https://cyprianchux.github.io/chiprian/">here</a> to view the website.
 
 ## ✨ Features
 
