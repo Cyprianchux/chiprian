@@ -50,10 +50,13 @@
 
   .channel-details {
     text-align: center;
+    justify-items: center;
     margin-top: 10px;
     font-size: 14px;
     line-height: 1.5;
   }
+
+
 
     .text1 {
       font-size: 25px;
@@ -69,22 +72,27 @@
 
     .location-icon-div {
       display: block;
-      width: 200px;
+      max-width: 180px;
       margin-top: 40px;
+      background-color: antiquewhite;
     }
+
     .location-icon {
       width: 20px; 
     }
 
     .text2 {
       margin-bottom: 0px;
+      text-wrap: wrap;
+      word-wrap: break-word;
     }
 
     .camera-icon-div {
       display: block;
-      width: auto;
+      width: 180px;
       margin-left: 200px;
       margin-top: -55px;
+      background-color: aqua;
     }
     .camera-icon {
       width: 25px;
@@ -136,7 +144,6 @@ footer {
   /* Also show middle header links */
   #menu-toggle:checked ~ header .middle-header {
     flex-direction: row;
-    position: absolute;
     top: 67px;
     left: 285px;
     border-bottom: 1px solid rgb(128, 128, 128, 0.3);
@@ -144,9 +151,80 @@ footer {
     padding: 15px;
     border-bottom-right-radius: 10px;
   }
-}
 
   /* Push content down */
   #menu-toggle:checked ~ main {
-    margin-top: 25px;
+    margin-top: 30px;
+    transition: 0.5s ease-in;
   }
+}
+
+@media screen and (max-width: 640px) {
+  #menu-toggle:checked ~ header .right-header-menu,
+  #menu-toggle:checked ~ header .middle-header {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    gap: 20px;
+    border-bottom: none;
+    background-color: transparent;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.9);
+    
+    /* Delay appearance of toggled menu so it doesn't overlap h1 */
+    animation: fadeInDown 0.3s ease 0.3s forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeInDown {
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Toggle: when checkbox is checked, show vertical dropdown */
+  #menu-toggle:checked ~ header .right-header-menu {
+    position: absolute;
+    top: 70px;
+    left:55px;
+    border-bottom-left-radius: 0;
+  }
+
+  /* Also show middle header links */
+  #menu-toggle:checked ~ header .middle-header {
+    position: absolute;
+    top: 192px;
+    left: 55px;
+    padding-right: 31px;
+  }
+
+    /* Push content down */
+  #menu-toggle:checked ~ main {
+    margin-top: 200px;
+    transition: margin-top 0.5s ease-in;
+  }
+
+  /* Push content up */
+  #menu-toggle:not(checked) ~ main {
+    margin-top: 0;
+    transition: margin-top 0.7s ease-out;
+  }
+
+  .highlight:hover, .about:hover,
+  .contact:hover, .photos:hover,
+  .videos:hover {
+    color: rgb(197, 0, 80);
+    scale: 1.06;
+  }
+
+  .highlight:active, .about:active,
+  .contact:active, .photos:active,
+  .videos:active {
+    font-weight: bold;
+  }  
+
+  /* Push content down */
+  #menu-toggle:checked ~ main {
+    margin-top: 180px;
+  }
+}

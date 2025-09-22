@@ -139,7 +139,6 @@ video {
 /* ========== RESPONSIVE MENUS ========== */
 
   /* Toggle: when checkbox is checked, show vertical dropdown */
-  /* Toggle: when checkbox is checked, show vertical dropdown */
 
 @media screen and (max-width: 900px) {
   #menu-toggle:checked ~ header .right-header-menu {
@@ -173,7 +172,7 @@ video {
   .vd {
     width: 400px;
   }
-  
+
   #menu-toggle:checked ~ header .right-header-menu,
   #menu-toggle:checked ~ header .middle-header {
     display: flex;
