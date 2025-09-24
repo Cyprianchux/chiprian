@@ -1,46 +1,50 @@
 /* ========== BODY ========== */
 .main-body {
-  padding: 40px 20px 0 0px;
+  padding: 40px 20px;
 }
 
 .content-body {
-  margin: 40px 20px 20px 20px;
-  display: block;
+  padding: 40px 0;
+  display: flex;
+}
+
+.content-body p {
+  margin: 0;
 }
 
 .contact-logos {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  padding: 0;
+}
+
+.kingschat-logo, .instagram-logo {
+  width: 60px;
   display: inline-block;
   vertical-align: middle;
-  width: 600px;
-  margin-left: 20px;
-  margin-top: 50px;
 }
-.kingschat-logo-div, .instagram-logo-div {
-  display: inline-block;
+
+.kingschat-logo img, .instagram-logo img {
+  width: 100%;
+  border-radius: 20px;
 }
-.kingschat-logo, .kingsconf-logo, .instagram-logo {
-  width: 85px;
-  vertical-align: middle;
-}
+
 .kingschat-username, .instagram-username {
-  display: inline-block;
+  flex: 1;
   font-size: 25px;
   font-weight: bold;
   color: rgb(66, 65, 65);
-  vertical-align: middle;
-}
-.kingschat-username {
-  margin-top: 30px;
-}
-.kingschat-container, .instagram-container {
-  display: block
+  display: inline-block;
 }
 
-@media screen and (max-width: 1100px) {
-  .contact-logos {
-    margin-top: 0px;
+@media screen and (min-width: 830px) {
+  .main-body {
+    padding: 100px 20px;
   }
-  .content-body {
-    margin-bottom: 0px;
+
+  .contact-logos {
+    flex: 1;
+    margin-top: 2vw;
   }
 }

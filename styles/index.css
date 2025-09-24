@@ -31,7 +31,7 @@ body {
   .logo {
     width: 40px;
     margin: 10px 7px 7px 5px;
-    border-radius: 6px;
+    border-radius: 3px 35px 8px 8px;
     display: inline-block;
   }
   
@@ -76,31 +76,73 @@ body {
     text-decoration: none;
   }
 
-  .menu-icon-label {
-    position: absolute;
-    right: 20px;
-    top: 0px;
-  }
+  /* Dark mode toggle styles */
+.dark-mode-toggle {
+  position: absolute;
+  right: 90px;
+  top: 8px;
+  font-size: 30px;
+  cursor: pointer;
+}
 
-  .menu-icon {
-    width: 50px;
-    display: none;
-    margin: 7px 0 2px 0;
-    cursor: pointer;
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
+@media screen and (min-width: 900px) {
+  .dark-mode-toggle {
+    right: 270px;
   }
+}
+
+#dark-toggle {
+  display: none;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark-mode .event-name,
+body.dark-mode p {
+  color: whitesmoke;
+}
+
+body.dark-mode .main-header,
+body.dark-mode header .middle-header,
+body.dark-mode header .right-header-menu {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .tool-tip {
   
-  .menu-icon:hover {
-    border: 1px solid rgba(197, 0, 80, 0.2);
-  }
+  pointer-events: none;
+}
 
-  .menu-icon:active {
-    border: solid;
-    border-radius: 10px;
-    border-color: rgb(164, 162, 162);
-    border-width: 3px;
-  }
+/* Styles for menu icon */
+.menu-icon-label {
+  position: absolute;
+  right: 20px;
+  top: 0px;
+}
+
+.menu-icon {
+  width: 50px;
+  display: none;
+  margin: 7px 0 2px 0;
+  cursor: pointer;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.menu-icon:hover {
+  border: 1px solid rgba(197, 0, 80, 0.2);
+}
+
+.menu-icon:active {
+  border: solid;
+  border-radius: 10px;
+  border-color: rgb(164, 162, 162);
+  border-width: 3px;
+}
 
 /* ========== BODY ========== */
 .main-body {
@@ -124,7 +166,6 @@ body {
   flex: 300px;
   max-width: 450px;
   margin: 10px 5vw 50px 20px;
-  background-color: white;
 }
 .display-picture {
   width: 100%;
@@ -134,7 +175,7 @@ body {
 /* === RESPONSIVE H1 === */
 h1 {
 font-size: clamp(1.5rem, 3vw, 2.5rem);
-transition: 1.5s ease;
+transition: 0.5s ease;
 }
 
 .page-description {
@@ -162,6 +203,7 @@ button {
   }
 
   /* ========== RESPONSIVE MENUS ========== */
+
 @media screen and (max-width: 900px) {
   .right-header-menu,
   .middle-header {
@@ -177,6 +219,16 @@ button {
 /* Delay appearance of toggled menu so it doesn't overlap h1 */
   #menu-toggle:checked ~ header .right-header-menu,
   #menu-toggle:checked ~ header .middle-header {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    gap: 20px;
+    border-bottom: none;
+    background-color: transparent;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.9);
+
+    /* Delay appearance of toggled menu so it doesn't overlap h1 */
     animation: fadeInDown 0.3s ease 0.3s forwards;
     opacity: 0;
   }
@@ -194,33 +246,25 @@ button {
   }
 
 /* Push content up */
-#menu-toggle:not(checked) ~ main {
+  #menu-toggle:not(checked) ~ main {
     margin-top: 0;
     transition: margin-top 0.7s ease-out;
   }
 
   /* Toggle: when checkbox is checked, show vertical dropdown */
   #menu-toggle:checked ~ header .right-header-menu {
-    display: flex;
-    flex-direction: column;
     position: absolute;
     top: 70px;
     left:55px;
-    padding: 10px 10px;
-    gap: 20px;
-    background-color: white;
   }
 
   /* Also show middle header links */
   #menu-toggle:checked ~ header .middle-header {
-    display: flex;
-    flex-direction: column;
     position: absolute;
-    top: 190px;
+    top: 192px;
     left: 55px;
-    padding: 10px 10px;
-    gap: 20px;
-    background-color: white;
+    padding-right: 31px;
+    border-bottom-right-radius: 10px;
   }
 
   .highlight:hover, .about:hover,
@@ -235,5 +279,29 @@ button {
   .videos:active {
     font-weight: bold;
   }  
+
+  /* Push content down */
+  #menu-toggle:checked ~ main {
+    margin-top: 190px;
+    transition: margin-top 0.5s ease-in;
+  }
 }
 
+.darkMode .tool-tip {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background-color: rgb(197, 0, 80);
+  border-radius: 5px;
+  padding: 3px 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+  pointer-events: none;
+  font-weight: bold;
+  padding: 10px;
+  color: white;
+}
+
+.darkMode:hover .tool-tip {
+  opacity: 1;
+}

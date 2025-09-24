@@ -2,13 +2,13 @@
 
 /* ========== BODY ========== */
 .main-body {
-  padding: 30px 10px;
+  padding: 90px 10px;
   justify-content: center;
 }
 
 .content-body {
-  padding-top: 65px;
-  margin: 0px 20px 20px 20px;
+  padding: 0;
+  margin: 20px auto;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -17,6 +17,8 @@
 
 h3 {
   margin: 0;
+  font-size: clamp(1.15rem, 2vw, 2rem);
+  transition: 0.5s ease;
 }
 
 /* = VIDEO BOARD SECTION = */
@@ -26,7 +28,7 @@ h3 {
   flex-wrap: wrap;
   column-gap: 7px;
   row-gap: 30px;
-  margin: 0 10px;
+  margin: auto;
   width: 100%;
   justify-content: center;
 }
@@ -154,7 +156,7 @@ video {
   #menu-toggle:checked ~ header .middle-header {
     flex-direction: row;
     top: 67px;
-    left: 285px;
+    left: 300px;
     border-bottom: 1px solid rgb(128, 128, 128, 0.3);
     background-color: white;
     padding: 15px;
@@ -169,10 +171,6 @@ video {
 }
 
 @media screen and (max-width: 640px) {
-  .vd {
-    width: 400px;
-  }
-
   #menu-toggle:checked ~ header .right-header-menu,
   #menu-toggle:checked ~ header .middle-header {
     display: flex;
@@ -200,6 +198,7 @@ video {
     position: absolute;
     top: 70px;
     left:55px;
+    border-bottom-left-radius: 0;
   }
 
   /* Also show middle header links */
@@ -237,8 +236,11 @@ video {
 
   /* Push content down */
   #menu-toggle:checked ~ main {
-    margin-top: 185px;
+    margin-top: 180px;
+  }
+
+  .vd {
+    max-width: 400px;
   }
 }
-
   

@@ -51,8 +51,13 @@
   }
 
   .picture-details {
-    margin-top: 5px;
-    margin-left: 10px;
+    padding: 5px 0 0 20px;
+
+
+  }
+
+  body.dark-mode .picture-details {
+    background-color: rgba(14, 39, 61, 0.8);
   }
 
   .channel-details {
@@ -129,9 +134,8 @@
   /* Also show middle header links */
   #menu-toggle:checked ~ header .middle-header {
     flex-direction: row;
-    position: absolute;
     top: 67px;
-    left: 290px;
+    left: 300px;
     border-bottom: 1px solid rgb(128, 128, 128, 0.3);
     background-color: white;
     padding: 15px;
@@ -140,7 +144,8 @@
 
   /* Push content down */
   #menu-toggle:checked ~ main {
-    margin-top: 35px;
+    margin-top: 30px;
+    transition: 0.5s ease-in;
   }
 }
 
@@ -172,6 +177,7 @@
     position: absolute;
     top: 70px;
     left:55px;
+    border-bottom-left-radius: 0;
   }
 
   /* Also show middle header links */
@@ -209,7 +215,7 @@
 
   /* Push content down */
   #menu-toggle:checked ~ main {
-    margin-top: 185px;
+    margin-top: 190px;
   }
 }
 
