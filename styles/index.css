@@ -139,6 +139,9 @@ body.dark-mode .tool-tip {
     right: 160px;
     top: 60px;
   }
+  body.dark-mode a {
+    color: whitesmoke;
+  }
 }
 
 /* Styles for menu icon */
