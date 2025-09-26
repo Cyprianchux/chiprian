@@ -1,14 +1,36 @@
-// Reference to the menu toggle checkbox
+
 const menuToggle = document.getElementById('menu-toggle');
+const menuTooltip = document.querySelector('.js-menu-tooltip');
 
-  window.addEventListener('scroll', () => {
-    if (menuToggle.checked) {
-      menuToggle.checked = false; // Uncheck to close dropdown
-    }
-  });
+menuToggle.addEventListener('click', () => {
+  if (menuTooltip.innerHTML === 'Open Menu') {
+    menuTooltip.innerHTML = 'Close Menu';
+  } else {
+    menuTooltip.innerHTML = 'Open Menu';
+  }
+})
 
-  const toggle = document.getElementById('dark-toggle');
-const tooltip = document.querySelector('.tool-tip');
+window.addEventListener('scroll', () => {
+  if (menuToggle.checked) {
+    menuToggle.checked = false; // Uncheck to close dropdown
+  }
+});
+
+const toggle = document.getElementById('dark-toggle');
+const themeTooltip = document.querySelector('.js-theme-tooltip');
+
+// Toggle dark mode
+toggle.addEventListener('change', () => {
+  if (toggle.checked) {
+    document.body.classList.add('dark-mode');
+    localStorage.setItem('theme', 'dark');
+    themeTooltip.innerHTML = 'Change display to light mode';
+  } else {
+    document.body.classList.remove('dark-mode');
+    localStorage.setItem('theme', 'light');
+    themeTooltip.innerHTML = 'Change display to dark mode';
+  }
+});
 
 // Apply saved theme on page load
 document.addEventListener('DOMContentLoaded', () => {
@@ -17,21 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (savedMode === 'dark') {
     document.body.classList.add('dark-mode');
     toggle.checked = true;
-    tooltip.innerHTML = 'Change display to light mode';
+    themeTooltip.innerHTML = 'Change display to light mode';
   } else {
-    tooltip.innerHTML = 'Change display to dark mode';
+    themeTooltip.innerHTML = 'Change display to dark mode';
   }
 });
 
-// Toggle dark mode
-toggle.addEventListener('change', () => {
-  if (toggle.checked) {
-    document.body.classList.add('dark-mode');
-    localStorage.setItem('theme', 'dark');
-    tooltip.innerHTML = 'Change display to light mode';
-  } else {
-    document.body.classList.remove('dark-mode');
-    localStorage.setItem('theme', 'light');
-    tooltip.innerHTML = 'Change display to dark mode';
-  }
-});
