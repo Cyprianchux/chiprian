@@ -24,7 +24,7 @@ body {
 
 /* ========== LEFT HEADER ========== */
 .left-header {
-  width:200px;
+  width:230px;
   display: flex;
   align-items: center;
 }
@@ -85,12 +85,6 @@ body {
   cursor: pointer;
 }
 
-@media screen and (min-width: 900px) {
-  .dark-mode-toggle {
-    right: 270px;
-  }
-}
-
 #dark-toggle {
   display: none;
 }
@@ -112,9 +106,39 @@ body.dark-mode header .right-header-menu {
   background-color: #1f1f1f;
 }
 
-body.dark-mode .tool-tip {
-  
+.darkMode .tool-tip,
+.menu-icon-div .tool-tip {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background-color: rgb(197, 0, 80);
+  border-radius: 5px;
+  padding: 3px 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
   pointer-events: none;
+  font-weight: bold;
+  padding: 10px;
+  color: white;
+}
+
+.darkMode:hover .tool-tip,
+.menu-icon-div:hover .tool-tip {
+  opacity: 1;
+}
+
+body.dark-mode .tool-tip {
+  pointer-events: none;
+}
+
+@media screen and (min-width: 900px) {
+  .dark-mode-toggle {
+    right: 270px;
+  }
+  .darkMode .tool-tip {
+    right: 160px;
+    top: 60px;
+  }
 }
 
 /* Styles for menu icon */
@@ -287,21 +311,4 @@ button {
   }
 }
 
-.darkMode .tool-tip {
-  position: absolute;
-  top: 70px;
-  right: 20px;
-  background-color: rgb(197, 0, 80);
-  border-radius: 5px;
-  padding: 3px 10px;
-  opacity: 0;
-  transition: opacity 0.3s ease-in;
-  pointer-events: none;
-  font-weight: bold;
-  padding: 10px;
-  color: white;
-}
 
-.darkMode:hover .tool-tip {
-  opacity: 1;
-}
