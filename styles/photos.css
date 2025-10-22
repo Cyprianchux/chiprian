@@ -33,7 +33,7 @@
 .grid-div {
   width: 290px;
   border: solid;
-  border-color: rgb(197, 0, 80);
+  border-color: rgb(210, 3, 86);
   border-width: 2px;
   border-radius: 5px;
 }
@@ -57,7 +57,7 @@
   }
 
   body.dark-mode .picture-details {
-    background-color: rgba(14, 39, 61, 0.8);
+    background-color: rgb(197, 0, 80);
   }
 
   .channel-details {
