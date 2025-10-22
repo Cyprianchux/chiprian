@@ -22,7 +22,7 @@ body {
   z-index: 1;
 }
 
-/* ========== LEFT HEADER ========== */
+/*  LEFT HEADER  */
 .left-header {
   width:230px;
   display: flex;
@@ -46,7 +46,7 @@ body {
     text-decoration: none;
   }
 
-  /* ========== MIDDLE HEADER ========== */
+  /*  MIDDLE HEADER  */
 .middle-header {
   flex: 1;
   word-spacing: 20px;
@@ -58,7 +58,7 @@ body {
     font-size: 18px;
   }
 
-  /* ========== RIGHT HEADER ========== */
+  /*  RIGHT HEADER  */
 .right-header {
   display: block;
   width: 220px;
@@ -131,7 +131,7 @@ body.dark-mode .tool-tip {
   pointer-events: none;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 830px) {
   .dark-mode-toggle {
     right: 270px;
   }
@@ -229,9 +229,7 @@ button {
     transition: 0.3s ease;
   }
 
-  /* ========== RESPONSIVE MENUS ========== */
-
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 830px) {
   .right-header-menu,
   .middle-header {
     display: none;
@@ -242,7 +240,7 @@ button {
     display: block;
   }
 
-  /* Transition dropdown visibility */
+ /* Transition dropdown visibility */
 /* Delay appearance of toggled menu so it doesn't overlap h1 */
   #menu-toggle:checked ~ header .right-header-menu,
   #menu-toggle:checked ~ header .middle-header {
