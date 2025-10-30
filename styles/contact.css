@@ -35,7 +35,7 @@
 
 .kingschat-logo img, .instagram-logo img {
   width: 100%;
-  border-radius: 15px;
+  border-radius: 50%;
 }
 
 .kingschat-username, .instagram-username {
