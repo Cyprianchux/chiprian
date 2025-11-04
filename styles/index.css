@@ -111,14 +111,13 @@ body.dark-mode header .right-header-menu {
   position: absolute;
   top: 70px;
   right: 20px;
-  background-color: rgb(197, 0, 80);
+  background-color: rgba(197, 0, 79, 0.8);
   border-radius: 5px;
   padding: 3px 10px;
   opacity: 0;
   transition: opacity 0.3s ease-in;
   pointer-events: none;
   font-weight: bold;
-  padding: 10px;
   color: white;
 }
 
