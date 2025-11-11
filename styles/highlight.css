@@ -51,7 +51,7 @@
     margin-top: 10px;
   }
 
-  .channel-details {
+  .details-div {
     text-align: center;
     justify-items: center;
     margin-top: 10px;
@@ -67,14 +67,14 @@
     width: 100%;
   }
 
-    .text1 {
+    .details {
       font-size: 25px;
       font-weight: bold;
       margin-bottom: 25px;
     }
 
-    .text2, .text3, .text4 {
-      color: grey;
+    .location-name, .camera-name, .time {
+      color: rgb(70, 69, 69);
       font-size: 16px;
       margin-top: 0;
     }
@@ -88,9 +88,11 @@
       margin-right: 2px;
     }
 
-    .text4-div {
+    .time-div {
       display: inline-block;
-      vertical-align: middle;
+    }
+    .time {
+      margin-left: 5px;
     }
 
     .location-icon, .camera-icon {
