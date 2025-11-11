@@ -40,6 +40,7 @@ h3 {
   border-color: rgb(197, 0, 80);
   border-width: 3px;
   border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
 }
 
   .vd {
@@ -67,20 +68,20 @@ h3 {
       border-radius: 30px;
     }
 
-  .channel-details {
+  .details-div {
     width: 340px;
     display: inline-block;
     margin-left: 5px;
   }
 
-    .text1 {
+    .details {
       margin-top: 0;
       font-size: 20px;
       font-weight: bold;
       margin-bottom: 15px;
     }
 
-    .text2, .text3, .text4 {
+    .location-name, .video-camera-name, .time {
       color: grey;
       font-size: 14px;
       margin-top: 0;
@@ -88,49 +89,43 @@ h3 {
 
     .location-icon-div {
       display: inline-block;
-      vertical-align: middle;
-    }
-    .location-icon {
-      width: 20px;
-      margin-right: 4px;
+      margin-right: 8px;
+      margin-left: 2px;
+      margin-bottom: 5px;
     }
 
-    .text2-div {
+    .location-name-div {
       display: inline-block;
     }
-    .text2 {
+    .location-name {
       margin-bottom: 0px;
     }
 
     .camera-icon-div {
       display: inline-block;
-      vertical-align: middle;
+      margin-right: 5px;
     }
     .camera-icon {
       width: 25px;
       margin-top: 1px;
     }
-    .text3-div {
+    .video-camera-name-div {
       display: inline-block;
     }
-    .text3 {
+    .video-camera-name {
       margin-left: 0px;
     }
 
     .clock-icon-div {
       display: inline-block;
-      vertical-align: middle;
-    }
-    .clock-icon {
-      width: 20px;
-      margin-right: 2px;
+      margin-right: 3px;
     }
 
-    .text4-div {
+    .time-div {
       display: inline-block;
     }
-    .text4 {
-      font-size: 16px;
+    .time {
+      font-size: 15px;
       margin-bottom: 5px;
       margin-left: 3px;
     }
