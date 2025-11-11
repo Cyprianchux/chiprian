@@ -29,15 +29,16 @@ body {
   align-items: center;
 }
   .logo {
-    width: 40px;
-    margin: 10px 7px 7px 5px;
+    width: 60px;
+    margin: 8px 5px 0px 5px;
     border-radius: 3px 35px 8px 8px;
     display: inline-block;
   }
   
   .event-name {
     color: rgb(67, 66, 66);
-    font-size: 20px;
+    font-size: 1.6rem;
+    font-weight: bold;
     margin: 0px;
     display: inline-block;
   }
@@ -54,6 +55,7 @@ body {
 }
   .photos, .videos {
     color: rgb(67, 66, 66);
+    font-weight: bold;
     text-decoration: none;
     font-size: 18px;
   }
@@ -73,6 +75,7 @@ body {
   .highlight, .about, .contact {
     font-size: 18px;
     color: rgb(67, 66, 66);
+    font-weight: bold;
     text-decoration: none;
   }
 
@@ -80,8 +83,8 @@ body {
 .dark-mode-toggle {
   position: absolute;
   right: 90px;
-  top: 8px;
-  font-size: 30px;
+  top: 15px;
+  font-size: 25px;
   cursor: pointer;
 }
 
@@ -130,6 +133,20 @@ body.dark-mode .tool-tip {
   pointer-events: none;
 }
 
+.dark-mode .menu-icon {
+  background: linear-gradient(to right, rgb(37, 36, 36), rgb(99, 97, 97));
+  color: white;
+  padding: 5px 8px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.dark-mode .menu-icon:hover {
+  background: linear-gradient(to right, rgb(99, 97, 97), rgb(37, 36, 36));
+  color: white;
+  transition: 0.3s;
+}
+
 @media screen and (min-width: 830px) {
   .dark-mode-toggle {
     right: 270px;
@@ -144,20 +161,28 @@ body.dark-mode .tool-tip {
 }
 
 /* Styles for menu icon */
-.menu-icon-label {
+.menu-icon {
   position: absolute;
-  right: 20px;
-  top: 0px;
+  right: 25px;
+  top: 10px;
+  font-size: 1.7rem;
+  font-weight: bolder;
+  cursor: pointer;
+  display: none;
+  background: linear-gradient(to right, white, rgb(235, 225, 227));
+  color: rgb(41, 39, 39);
+  padding: 5px 8px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
 
-.menu-icon {
-  width: 50px;
-  display: none;
-  margin: 7px 0 2px 0;
-  cursor: pointer;
-  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
+.menu-icon:hover {
+ background: linear-gradient(to left, white, rgb(229, 213, 216));
+ color: rgb(197, 0, 80);
+ transition: 0.3s;
+ color: rgb(41, 39, 39);
 }
+/*
 
 .menu-icon:hover {
   border: 1px solid rgba(197, 0, 80, 0.2);
@@ -169,6 +194,7 @@ body.dark-mode .tool-tip {
   border-color: rgb(164, 162, 162);
   border-width: 3px;
 }
+  */
 
 /* ========== BODY ========== */
 .main-body {
