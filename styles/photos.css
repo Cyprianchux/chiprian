@@ -36,6 +36,7 @@
   border-color: rgb(210, 3, 86);
   border-width: 2px;
   border-radius: 5px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.3);
 }
 
   .main-photo {
@@ -60,20 +61,20 @@
     background-color: rgb(197, 0, 80);
   }
 
-  .channel-details {
+  .details-div {
     width: 255px;
     display: inline-block;
     margin-left: 0px;
   }
 
-    .text1 {
+    .details {
       margin-top: 0;
       font-weight: bold;
       margin-bottom: 15px;
     }
 
-    .text2, .text3 {
-      color: grey;
+    .location-name, .camera-name {
+      color: rgb(70, 69, 69);
       font-size: 14px;
       margin-top: 0;
     }
@@ -81,16 +82,19 @@
     .location-icon-div {
       display: inline-block;
       vertical-align: middle;
+      margin-left: 2px;
+      margin-right: 6px;
     }
     .location-icon {
       width: 15px;
       margin-right: 2px;
     }
 
-    .text2-div {
+    .location-name-div {
       display: inline-block;
     }
-    .text2 {
+    
+    .location-name {
       margin-bottom: 0;
       margin-bottom: 5px;
     }
@@ -98,17 +102,11 @@
     .camera-icon-div {
       display: inline-block;
       vertical-align: middle;
+      margin-right: 5px;
     }
-    .camera-icon {
-      width: 15px;
-      margin-top: 1px;
-      margin-right: 2px;
-    }
-    .text3-div {
+
+    .camera-name-div {
       display: inline-block;
-    }
-    .text3 {
-      font-size: 12px;
     }
 
 .page-description-div {
