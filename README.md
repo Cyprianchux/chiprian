@@ -1,6 +1,6 @@
-# WeddingXperience Website
+# ChiPrian Website
 
-A responsive built to showcase photos, videos, and highlights of Chidinma & Cyprian’s wedding (22nd October, 2022).
+A responsive built to showcase photos, videos, and highlights of Chidinma & Cyprian’s weddingXperience (22nd October, 2022).
 
 This project demonstrates front-end web development with HTML, CSS, and JavaScript, featuring a responsive navigation menu, interactive UI elements, and modern design principles.
 
@@ -83,5 +83,5 @@ Open a Pull Request
 
 ## Acknowledgments
 
-Inspired by Chidinma & Cyprian’s Wedding Experience (2022) ❤️
+Inspired by Chidinma & Cyprian’s Wedding Experience (2022).
 Special thanks to family, friends, and well-wishers present at the wedding.
