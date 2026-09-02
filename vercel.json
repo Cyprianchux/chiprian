@@ -4,6 +4,11 @@
       "source": "/:path.html",
       "destination": "/:path",
       "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/Home",
+      "permanent": true
     }
   ],
   "rewrites": [
