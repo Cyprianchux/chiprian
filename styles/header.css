@@ -367,6 +367,7 @@ body.dark-mode a {
 }
 
 body.dark-mode .page-description { color:#ddd }
+body.dark-mode .event-date { color: #ddd; }
 
 /* ===== MOBILE RESPONSIVE (< 830px) ===== */
 @media screen and (max-width: 830px) {

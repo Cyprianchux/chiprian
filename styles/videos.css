@@ -41,10 +41,16 @@ h3 {
   border-width: 3px;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  box-sizing: border-box;
 }
 
   .vd {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
+  }
+  video {
+    width: 100%;
+    max-width: 400px;
   }
   
   .photo {
@@ -135,4 +141,83 @@ video {
 
 .vd {
   max-width: 400px;
+}  
+
+/* ===== INFO MODAL POPUP ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 999;
+}
+
+.modal-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-box {
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: 2px solid rgb(197, 0, 80);
+  border-radius: 10px;
+  padding: 30px 25px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  font-family: var(--font-nav), 'Segoe UI', sans-serif;
+}
+
+.modal-text {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 15px;
+  color: rgb(67, 66, 66);
+  text-align: justify;
+}
+
+.modal-hint {
+  font-size: 14px;
+  font-style: italic;
+  color: rgb(120, 120, 120);
+  margin: 0 0 20px;
+}
+
+.modal-close {
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(197, 0, 80);
+  padding: 10px 45px;
+  border: 1px solid rgb(197, 0, 80);
+  border-radius: 5px;
+}
+
+.modal-close:hover {
+  color: rgb(197, 0, 80);
+  background-color: rgb(255, 236, 232);
+  border-color: rgb(210, 6, 88);
+  scale: 1.02;
+  transition: 0.3s ease;
+}
+
+body.dark-mode .modal-box {
+  background-color: var(--color-header-dark);
+  border-color: var(--color-rose);
+}
+
+body.dark-mode .modal-text {
+  color: #eee;
+}
+
+body.dark-mode .modal-hint {
+  color: #bbb;
 }  

@@ -15,10 +15,10 @@
   <header>
     <div class="main-header">
       <div class="left-header">
-        <a href="index.html">
+        <a href="/">
           <img class="logo" src="assets/cc-name.png" alt="c&c-logo">
         </a>
-        <a class="homepage-link" href="index.html">
+        <a class="homepage-link" href="/">
           <p class="event-name">ChiPrian</p>
         </a>
       </div>
@@ -249,13 +249,40 @@
     </div>
   </main>
 
+  <div class="modal-overlay" id="info-modal" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <p class="modal-text">
+        The videos of the INTRODUCTION, TRADITIONAL MARRIAGE, and CHURCH WEDDING ceremonies are not uploaded here for personal reasons. Nevertheless, you can watch the HIGHLIGHTS of the wedding ceremony and reception in the Highlight page.
+      </p>
+      <p class="modal-hint">Click OK to continue viewing other videos on this page</p>
+      <button class="modal-close" id="modal-close">OK</button>
+    </div>
+  </div>
+
   <script src="index.js"></script>
   <script>
-    setTimeout(() => {
-      alert(`The videos of the INTRODUCTION, TRADITIONAL MARRIAGE, and CHURCH WEDDING ceremonies are not uploaded here for personal reasons. Nevertheless, you can watch the HIGHLIGHTS of the wedding ceremony and reception in the Highlight page.
+    const infoModal = document.getElementById('info-modal');
+    const modalClose = document.getElementById('modal-close');
 
-Click OK to continue viewing other videos on this page`);
+    setTimeout(() => {
+      infoModal.classList.add('show');
     }, 8000);
+
+    modalClose.addEventListener('click', () => {
+      infoModal.classList.remove('show');
+    });
+
+    infoModal.addEventListener('click', (event) => {
+      if (event.target === infoModal) {
+        infoModal.classList.remove('show');
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        infoModal.classList.remove('show');
+      }
+    });
   </script>
 </body>
 </html>
